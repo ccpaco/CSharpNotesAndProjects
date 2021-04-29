@@ -607,6 +607,70 @@ class Point3D : Point2D
     
 }
 
+// 20 Employee Class
+
+abstract class Employee 
+    {
+     public string department;
+     public string name;
+     public string location;
+     public string type;
+     public bool isOnVacation = false;
+        
+     public Employee(){}
+     
+     public Employee (string _type, string _name, string _location)
+     {
+         type = _type;
+         name = _name;
+         location = _location;
+     }
+        
+     public string GetDepartment()
+     {
+         return this.department;
+     }
+     
+     public string GetName()
+     {
+         return this.name;
+     }
+     
+     public string GetLocation()
+     {
+         return this.location;
+     }
+     
+     public bool GetStatus()
+     {
+         return this.isOnVacation;
+     }
+     
+     public void SwitchStatus()
+     {
+         this.isOnVacation = !isOnVacation;
+     }    
+    }
+    
+    class FinanceEmployee: Employee 
+    {
+        public FinanceEmployee(string _name, string _location):base()
+        {
+            this.department = "Finance";
+            this.name = _name;
+            this.location = _location; 
+        }
+    }
+    class MarketingEmployee: Employee 
+    {
+        public MarketingEmployee(string _name, string _location):base()
+        {
+            this.department = "Marketing";
+            this.name = _name;
+            this.location = _location; 
+        }
+    }
+
 
 // nested list C#, bev
 

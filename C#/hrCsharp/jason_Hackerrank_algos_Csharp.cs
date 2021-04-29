@@ -94,7 +94,7 @@ public class Point2D
     public double y;
     
     public Point2D(double X, double Y)
-    {
+    {d
         x = X;
         y = Y;
     }
@@ -135,4 +135,4 @@ public class Point3D : Point2D
     // public void printDistance(double d)
     // {
     //     do
-    // }
+    // 

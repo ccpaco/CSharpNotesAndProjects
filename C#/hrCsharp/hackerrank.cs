@@ -548,3 +548,80 @@ namespace Solution
     }
 }
 
+
+//Classes to calculate 2D distance of 2 points, 3D distance of 3 points.
+
+class Point2D{
+    
+    public double x;
+    public double y;
+    
+    public Point2D(){}
+    
+    public Point2D(double _x, double _y){
+        x = _x;
+        y = _y;
+    }
+    
+    public double dist2D(Point2D p)
+    {
+        double res1 = Math.Pow((p.x - x), 2);
+        double res2 = Math.Pow((p.y - y), 2);
+        double final = Math.Sqrt(res1 + res2);
+        return final; 
+    }
+    
+    public void printDistance(double d)
+    {
+        double round = Math.Ceiling(d);
+        Console.WriteLine($"2D distance = {round}");
+    }
+    
+    
+}
+
+class Point3D : Point2D
+{
+    public double z;
+    
+    public Point3D(double _x, double _y, double _z) : base(_x, _y)
+    {
+        z = _z;
+    }
+    
+    public double dist3D(Point3D p)
+    {
+        double res1 = Math.Pow((p.x - x), 2);
+        double res2 = Math.Pow((p.y - y), 2);
+        double res3 = Math.Pow((p.z - z), 2);
+        double final = Math.Sqrt(res1 + res2 + res3);
+        return final;
+    }
+    
+     public void printDistance(double d)
+    {
+        double round = Math.Ceiling(d);
+        Console.WriteLine($"3D distance = {round}");
+    }
+    
+    
+}
+
+
+// nested list C#, bev
+
+foreach(List<string> product in products)
+{
+  for(int i = 1; i < product.Count; i++)
+    {
+
+    }
+}
+
+foreach(List<string> discount in discounts)
+{
+
+
+}
+
+// then i used discount[0], discount[1] and discount[2] to get the data i needed to store in dictionary
